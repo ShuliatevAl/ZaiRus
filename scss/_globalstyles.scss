@@ -18,7 +18,20 @@
 
 // Переменные
 
+$minWidth: 320px;
+$maxWidth: 1240px;
+
+$md2: 922px;
+
 // Шаблоны
+
+// Основная сетка
+
+._container {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 // Глобальные стили
 
@@ -42,10 +55,6 @@ body {
     display: flex;
     flex-direction: column;
 
-    width: 440px;
-
-    margin: 0 auto;
-
     font-family: "PT Sans";
     font-weight: normal;
     font-size: 18px;
@@ -55,7 +64,7 @@ body {
     text-transform: uppercase;
 }
 
-.link {
+a {
     text-decoration: none;
     color: inherit;
     
