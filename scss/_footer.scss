@@ -1,0 +1,144 @@
+.footer {
+    width: 100%;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+    
+    font-size: 14px;
+    color: white;
+
+    background-color: #15232e;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__text {
+    margin: 15px auto;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    margin: 15px auto;
+}
+
+.contacts__link {
+    position: relative;
+    
+    &:nth-of-type(n) {
+        &::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 10px;
+            left: -30px;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+    &:nth-of-type(1) {
+        &::before {
+            background-image: url(/img/footer/contacts/skype-icon.svg);
+        }
+    }
+    &:nth-of-type(2) {
+        &::before {
+            background-image: url(/img/footer/contacts/mail.svg);
+        }
+    }
+    &:nth-of-type(3) {
+        &::before {
+            background-image: url(/img/footer/contacts/Help_icon.svg);
+        }
+    }
+}
+
+.footer__buttons {
+    margin: 20px auto;
+}
+
+.footer__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.social__link {
+    width: 50px;
+    height: 50px;
+    
+    margin: 20px 10px;
+    
+    border-radius: 20%;    
+    background-color: blue;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    &:nth-of-type(1) {
+        background-image: url(/img/footer/social/facebook_icon.svg);
+    }
+    &:nth-of-type(2) {
+        background-image: url(/img/footer/social/instagram_icon.svg);
+    }
+    &:nth-of-type(3) {
+        background-image: url(/img/footer/social/twitter_icon.svg);
+    }
+
+    &:hover,
+    &:active {
+        background-color: orange;
+    }
+}
+
+// Медиа-запросы
+
+@media screen and (max-width: $md2) {
+    .footer__top {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .footer__text {
+        font-size: 18px;
+
+        &:nth-of-type(2) {
+            margin: auto;
+        }
+    }
+}
+
+@media screen and (max-width: $md4) {
+    .footer__top {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer__text {
+        display: none;
+    }
+
+    .footer__contacts {
+        padding-left: 30px;
+        padding-right: 10px;
+    }
+}

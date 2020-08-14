@@ -1,2 +1,23 @@
-@import "_nullstyle", "_globalstyles", "_header";
+@import "_nullstyle", "_globalstyles", "_header", "_footer", "_index";
 
+.button {
+    display: inline-block;
+    
+    width: 100%;
+    height: 50px;
+
+    border: 2px solid black;
+    background-color: lightseagreen;
+
+    text-align: center;
+    vertical-align: center;
+
+    &:nth-child(2n) {
+        margin-top: 20px;
+    }
+    
+    &:hover,
+    &:active {
+        background-color: orange;
+    }
+}
