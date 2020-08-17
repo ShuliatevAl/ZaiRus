@@ -2,7 +2,7 @@
 var slideShow = (function () {
   return function (selector, config) {
     var
-      _slider = document.querySelector(selector), // основный элемент блока
+      _slider = document.querySelector('.slider'), // основный элемент блока
       _sliderContainer = _slider.querySelector('.slider__items'), // контейнер для .slider-item
       _sliderItems = _slider.querySelectorAll('.slider__item'), // коллекция .slider-item
       _sliderControls = _slider.querySelectorAll('.slider__control'), // элементы управления
