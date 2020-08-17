@@ -1,4 +1,5 @@
 @@include('webp.js');
+@@include('slider.js');
 
 // Скрипт бургера
 

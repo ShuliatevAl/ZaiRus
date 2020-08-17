@@ -11,8 +11,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 70px;
     position: relative;
+    
+    height: 70px;
     
     background-color: lightgrey;
 }
@@ -62,26 +63,14 @@
 // Медиа-запросы
 
 @media screen and (max-width: $md2) {
-    .header__content {
-        flex-wrap: wrap;
-    }
-
-    .header__menu {
-        margin: 10px auto 10px;
-    }
-
-    .menu__body {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width: $md3) {
     .body.lock {
         overflow: hidden;
     }
     
     .header__content {
         flex-direction: column;
+
+        height: 70px;
     }
 
     .header__menu {
@@ -107,7 +96,7 @@
 
     .menu__body {
         width: 100%;
-        min-height: 50px;
+        height: 50px;
         
         position: relative;
     }
@@ -123,6 +112,7 @@
 
     .menu__list {
         position: fixed;
+        top: 10px;
         background: #0a1f94;
         height: 50vh;
         width: 100%;

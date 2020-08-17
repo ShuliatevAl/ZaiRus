@@ -1,4 +1,4 @@
-@import "_nullstyle", "_globalstyles", "_header", "_footer";
+@import "_nullstyle", "_globalstyles", "_header", "_footer", "_index";
 
 .button {
     display: inline-block;
@@ -15,7 +15,7 @@
     &:nth-child(2n) {
         margin-top: 20px;
     }
-    
+
     &:hover,
     &:active {
         background-color: orange;
