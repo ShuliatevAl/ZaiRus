@@ -4,7 +4,7 @@
     &__team {
       display: flex;
       flex-direction: row;
-      //justify-content: space-between;
+      justify-content: space-between;
       flex-wrap: wrap;
     }
 
@@ -97,6 +97,7 @@
     &__text {
       flex: 0 0 67%;
       max-width: 61%;
+      padding: 0 10px;
       z-index: 4;
     }
 
@@ -201,12 +202,53 @@
     }
   }
 
+// Медиа выражения
 
+  @media screen and (max-width: $md2) {
+    
+    .index__card {
+      flex: 1 0 33%;
+      border: 1px solid black;
+    }
 
-  @media screen and (max-width: $md4) {
+    .card__1 {
+      order: 0;
+    }
   
+    .card__2 {
+      order: 0;
+    }
+
+    .slider {
+      order: 1;
+    }
+
+    .news {
+      order: 2;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+
+  .index__card {
+    flex: 1 0 33%;
+  }
+
+  .card__1 {
+    order: 0;
+  }
+
+  .card__2 {
+    order: 2;
+  }
+
+  .news {
+    order: 3;
+  }
+
   .slider {
     min-height: 450px;
+    order: 1;
     
     &__wrapper {
       min-height: 450px;
