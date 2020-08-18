@@ -47,7 +47,7 @@ const fileinclude = require('gulp-file-include');
     imagemin = require("gulp-imagemin"),
     webp = require("gulp-webp"),
     webphtml = require("gulp-webp-html"),
-    webpcss = require("gulp-webp-css"),
+    //webpcss = require("gulp-webp-css"),
     ttf2woff = require("gulp-ttf2woff"),
     ttf2woff2 = require("gulp-ttf2woff2");
 
@@ -112,12 +112,12 @@ function css() {
             cascade: true
         })
     )
-    .pipe(
+    /*.pipe(
         webpcss({
             webpClass: '.webp',
             noWebpClass: '.no-webp'
         })
-    )
+    )*/
     .pipe(dest(path.build.css))
     .pipe(clean_css())
     .pipe(
