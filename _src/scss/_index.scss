@@ -1,12 +1,32 @@
 .index {
     margin: 70px 0 0 0;
 
-    &__content {
+    &__team {
+      display: flex;
+      flex-direction: row;
+      //justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__card {
+      flex: 1 0 33%;
+      min-width: $minWidth;
+      min-height: 300px;
       background-color: red;
     }
 
     &__slider {
+      flex: 1 0 67%;
+      min-width: $minWidth;
+      min-height: 300px;
       background-color: teal;
+    }
+
+    &__news {
+      flex: 1 0 67%;
+      min-width: $minWidth;
+      min-height: 300px;
+      background-color: yellow;
     }
 }
 
@@ -41,7 +61,6 @@
 .slider {
     position: relative;
     overflow: hidden;
-    max-width: $maxWidth;
 
     &__wrapper {
       position: relative;
@@ -59,38 +78,44 @@
     }
 
     &__content {
+      display: flex;
+      justify-content: space-between;
       position: relative;
     }
 
     &__image {
-      position: absolute;
-      top: 8%;
-      left: 5%;
-      
-      width: 250px;
-      height: 250px;
-
+      flex: 0 0 33%;
+      max-width: 220px;
+      max-height: 220px;
+      min-width: 220px;
+      min-height: 220px;
+      margin: 40px 0 40px 40px;
+      z-index: 5;
       border-radius: 50%;
     }
 
-    &__name {
-      position: absolute;
-      top: 15%;
-      left: 45%;
-      text-align: center;
+    &__text {
+      flex: 0 0 67%;
+      max-width: 61%;
+      z-index: 4;
+    }
 
-      font-size: 40px;
+    &__name {
+      margin: 45px auto;
+      text-align: center;
+      font-size: 36px;
       font-weight: bold;
       color: black;
     }
 
-    &__text {
-      position: absolute;
-      top: 40%;
-      left: 45%;
-      
-      font-size: 28px;
-      color: black;
+    &__description {
+      margin: 45px auto;
+      text-align: center;
+      line-height: 30px;
+    }
+
+    &__position {
+      font-weight: bold;
     }
 
     // стили для кнопок "вперед" и "назад"
@@ -175,3 +200,47 @@
       }
     }
   }
+
+
+
+  @media screen and (max-width: $md4) {
+  
+  .slider {
+    min-height: 450px;
+    
+    &__wrapper {
+      min-height: 450px;
+    }
+
+    &__items {
+      min-height: 450px;
+    }
+
+    &__content {
+      flex-direction: column;
+      min-height: 450px;
+    }
+
+    &__image {
+      max-width: 200px;
+      max-height: 200px;
+      min-width: 200px;
+      min-height: 200px;
+      margin: 25px auto 0;
+    }
+
+    &__text {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    &__name {
+      margin: 25px auto;
+    }
+
+    &__description {
+      margin: 10px auto;
+    }
+  }
+}
