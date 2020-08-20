@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="index__content">
-               <div class="index__team _container2">
+               <div class="index__start _container2">
                    <div class="index__card card card__1">
                         <figure class="card__content">
                             <img class="card__image" src="/img/index/PeriodicTable.png" alt="Таблица Менделеева">
@@ -162,7 +162,49 @@
 
                    </div>
                 </div>
-                    
+                <div class="index__middle _container2">
+                    <section class="index__contacts contacts">
+                        <h2 class="index__title">Контактная информация</h2>
+                        <p class="contacts__adress">
+                            Барбершоп «Borodinski»<br>
+                            Адрес: Санкт-Петербург, Б. Конюшенная, 19/8<br>
+                            Телефон: <a href="tel:+78005555555">+7 (800) 555-55-55</a>
+                        </p> 
+                        <p class="contacts__hours">
+                            Время работы:<br>
+                            Пн – Пт: 10:00 – 21:00<br>
+                            Сб – Вс: 10:00 – 19:00<br>
+                         </p>
+                         <a class="button" href="" title="Открыть карту">Как проехать</a>
+                    </section>
+                    <section class="index__appointment appointment">
+                        <h2 class="index__title">Записаться</h2>
+                        <p class="appointment__description">Укажите желаемую дату и время, и мы свяжемся с Вами</p>
+                        <form class="appointment__form form" action="index.html" method="POST">
+                            <div class="form__field-holder">
+								<input id="date-field" class="form__field" type="text" name="date" placeholder="20.08.2020">
+								<label for="date-field" class="form__label">Дата</label>
+							</div>
+
+	                     	<div class="form__field-holder">
+								<input id="time-field" class="form__field" type="text" name="time" placeholder="13.00">
+								<label for="time-field" class="form__label">Время</label>
+	                     	</div>
+
+							<div class="form__field-holder">
+								<input id="name-field" class="form__field" type="text" name="name" placeholder="Иван">
+								<label for="name-field" class="form__label">Ваше имя</label>
+	                     	</div>
+
+							<div class="form__field-holder">
+								<input id="email-field" class="form__field" type="email" name="email" placeholder="awesomeVan@mail.ru">
+								<label for="email-field" class="form__label">Электронная почта</label>
+	                     	</div>
+
+	                     	<button class="form__button button" type="submit">Оставить заявку</button>
+                        </form>
+                    </section>
+                </div>
                 <div class="index__rofl _container">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -193,13 +235,13 @@
                 Вам разобраться.
             </p>
             <div class="footer__contacts">
-                <a class="contacts__link">
+                <a class="footer__link">
                     Skype: ZaiRus
                 </a>
-                <a class="contacts__link">
+                <a class="footer__link">
                     info_zr@mail.tu
                 </a>
-                <a class="contacts__link">
+                <a class="footer__link">
                     FAQ page
                 </a>
             </div>

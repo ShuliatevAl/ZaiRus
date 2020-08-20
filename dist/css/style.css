@@ -213,11 +213,11 @@ a {
   margin: 15px auto;
 }
 
-.contacts__link {
+.footer__link {
   position: relative;
 }
 
-.contacts__link:nth-of-type(n)::before {
+.footer__link:nth-of-type(n)::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -229,15 +229,15 @@ a {
   background-size: contain;
 }
 
-.contacts__link:nth-of-type(1)::before {
+.footer__link:nth-of-type(1)::before {
   background-image: url(/img/footer/contacts/skype-icon.svg);
 }
 
-.contacts__link:nth-of-type(2)::before {
+.footer__link:nth-of-type(2)::before {
   background-image: url(/img/footer/contacts/mail.svg);
 }
 
-.contacts__link:nth-of-type(3)::before {
+.footer__link:nth-of-type(3)::before {
   background-image: url(/img/footer/contacts/Help_icon.svg);
 }
 
@@ -292,7 +292,7 @@ a {
   margin: 70px 0 0 0;
 }
 
-.index__team {
+.index__start {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
