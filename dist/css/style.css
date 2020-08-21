@@ -714,6 +714,127 @@ a {
   text-transform: uppercase;
 }
 
+.about__photos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.person-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 15px 10px;
+  min-width: 300px;
+  max-width: 300px;
+  height: 400px;
+  background-color: white;
+  box-shadow: 2px 2px 5px 0 gray;
+}
+
+.person-card__background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 250px;
+  background-image: url("/img/about/Person_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 99%);
+          clip-path: polygon(0 0, 100% 0, 100% 60%, 0 99%);
+}
+
+.person-card__svg-figure {
+  position: absolute;
+  z-index: 1;
+}
+
+.person-card__image {
+  position: absolute;
+  top: 80px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 2px black;
+  z-index: 2;
+}
+
+.person-card__title {
+  position: absolute;
+  top: 15px;
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: white 2px 2px 15px;
+}
+
+.person-card__position {
+  position: absolute;
+  top: 240px;
+  text-transform: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.person-card__description {
+  position: absolute;
+  top: 275px;
+  text-align: center;
+  text-transform: none;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.person-card__line {
+  position: absolute;
+  top: 148px;
+  width: 100%;
+  height: 250px;
+  background-image: url("/img/about/line.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.person-card__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 315px;
+  z-index: 3;
+}
+
+.person-card__link {
+  width: 50px;
+  height: 50px;
+  margin: 20px 10px;
+  border-radius: 20%;
+  background-color: lightgray;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.person-card__link:nth-of-type(1) {
+  background-image: url(/img/footer/social/facebook_icon.svg);
+}
+
+.person-card__link:nth-of-type(2) {
+  background-image: url(/img/footer/social/instagram_icon.svg);
+}
+
+.person-card__link:nth-of-type(3) {
+  background-image: url(/img/footer/social/twitter_icon.svg);
+}
+
+.person-card__link:hover,
+.person-card__link:active {
+  background-color: orange;
+}
+
 .button {
   display: block;
   width: 100%;
