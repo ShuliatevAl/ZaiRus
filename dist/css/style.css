@@ -320,6 +320,28 @@ a {
   background-color: yellow;
 }
 
+.index__middle {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.index__contacts {
+  flex: 1 0 45%;
+  min-width: 320px;
+  background-color: green;
+}
+
+.index__appointment {
+  flex: 1 0 55%;
+  min-width: 320px;
+  background-color: orange;
+}
+
+.index__title {
+  text-align: center;
+}
+
 .preview {
   width: 100%;
   min-height: 400px;
@@ -560,6 +582,138 @@ a {
   font-weight: bold;
 }
 
+.contacts {
+  padding: 15px 30px;
+}
+
+.contacts__adress,
+.contacts__hours {
+  margin: 10px auto;
+  font-size: 20px;
+}
+
+.contacts__highlight {
+  font-weight: bold;
+}
+
+.appointment {
+  padding: 15px 30px;
+}
+
+.appointment__description {
+  margin: 10px 0;
+  text-align: justify;
+  line-height: 24px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form__field-holder {
+  flex: 1 0 50%;
+  position: relative;
+  margin: 10px auto;
+}
+
+.form__field-holder_first,
+.form__field-holder_third {
+  padding-right: 10px;
+}
+
+.form__field-holder_second,
+.form__field-holder_fourth {
+  padding-left: 10px;
+}
+
+.form__field-holder_last {
+  flex: 1 0 100%;
+  margin-bottom: 30px;
+}
+
+.form__field {
+  min-width: 100%;
+  margin-top: 12px;
+  padding: 5px 15px;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.form__field_last {
+  min-width: 100%;
+}
+
+.form__field:focus {
+  outline: none;
+  border: 2px solid #663d15;
+}
+
+.form__field::-moz-placeholder {
+  text-transform: capitalize;
+}
+
+.form__field:-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+.form__field::-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+.form__field::placeholder {
+  text-transform: capitalize;
+}
+
+.form__field:-moz-placeholder-shown + .form__label {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.form__field:-ms-input-placeholder + .form__label {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.form__field:placeholder-shown + .form__label {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.form__label {
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  display: block;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.form__button {
+  text-transform: uppercase;
+}
+
 .button {
   display: block;
   width: 100%;
@@ -576,7 +730,7 @@ a {
   background-color: orange;
 }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1066px) {
   .slider {
     min-height: 400px;
   }
@@ -728,6 +882,53 @@ a {
   .news {
     order: 2;
   }
+
+  .form__field-holder {
+    flex: 0 0 45%;
+  }
+
+  .form__field-holder_last {
+    flex: 0 0 100%;
+  }
+
+  .form__field-holder_first,
+  .form__field-holder_second,
+  .form__field-holder_third,
+  .form__field-holder_fourth {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .form__field-holder {
+    flex: 1 0 50%;
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 711px) {
+  .form {
+    flex-direction: row;
+  }
+
+  .form__field-holder {
+    flex: 1 0 50%;
+    min-width: 200px;
+  }
+
+  .form__field-holder_first,
+  .form__field-holder_third {
+    padding-right: 10px;
+  }
+
+  .form__field-holder_second,
+  .form__field-holder_fourth {
+    padding-left: 10px;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -810,6 +1011,24 @@ a {
   .footer__contacts {
     padding-left: 30px;
     padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .form__field-holder {
+    flex: 1 0 50%;
+    min-width: 100%;
+  }
+
+  .form__field-holder_first,
+  .form__field-holder_third,
+  .form__field-holder_second,
+  .form__field-holder_fourth {
+    padding: 0;
   }
 }
 
