@@ -583,17 +583,29 @@ a {
 }
 
 .contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 15px 30px;
 }
 
+.contacts__company,
 .contacts__adress,
 .contacts__hours {
-  margin: 10px auto;
+  margin: 10px 0 0 10px;
   font-size: 20px;
+}
+
+.contacts__hours {
+  margin-bottom: 10px;
 }
 
 .contacts__highlight {
   font-weight: bold;
+}
+
+.contacts__button {
+  max-width: 100%;
 }
 
 .appointment {

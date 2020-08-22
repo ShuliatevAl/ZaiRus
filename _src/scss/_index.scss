@@ -311,17 +311,28 @@
 }
 
 .contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 15px 30px;
-
+  
+  &__company,
   &__adress,
   &__hours {
-    margin: 10px auto;
-
+    margin: 10px 0 0 10px;
     font-size: 20px;
+  }
+
+  &__hours {
+    margin-bottom: 10px;
   }
 
   &__highlight {
     font-weight: bold;
+  }
+
+  &__button {
+    max-width: 100%;
   }
 }
 
