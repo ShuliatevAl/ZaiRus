@@ -1,9 +1,30 @@
 .about {
     
+    margin: 70px 0 0 0;
+
+    &__content {
+        background-color: lightgreen;
+    }
+
+    &__intro,
+    &__team { 
+        max-width: 100%;
+        
+        margin: 0 auto;
+        padding: 10px 10px;
+
+        font-size: 14px;
+        text-align: justify;
+    }
+
     &__photos {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
+
+        background-image: url("/img/index/preview.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
@@ -16,7 +37,7 @@
     max-width: 300px;
     height: 400px;
     
-    background-color: white;
+    //mix-blend-mode: multiply;
     perspective: 1000px;
 
     &__front,
@@ -32,9 +53,13 @@
         width: 100%;
         height: 100%;
 
-        border-radius: 5%;
+        border-radius: 10%;
         transition: 1s;
         backface-visibility: hidden;
+    }
+
+    &__front {
+        background-color: #fff;
     }
 
     &__back {
@@ -173,6 +198,18 @@
         &:hover,
         &:active {
             background-color: orange;
+        }
+    }
+}
+
+// Медиа запросы 
+
+@media screen and (max-width: 992px) {
+    .person-card {
+        flex: 0 0 33%;
+        
+        &:nth-of-type(3) {
+            display: none;
         }
     }
 }
