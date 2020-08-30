@@ -67,11 +67,11 @@
         background-color: grey;
     }
 
-    &:hover .person-card__front {
+    &:active .person-card__front {
         transform: rotateY(180deg);
     }
 
-    &:hover .person-card__back {
+    &:active .person-card__back {
         transform: rotateY(360deg);
     }
     

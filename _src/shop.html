@@ -4,7 +4,30 @@
     <body class="body">
         @@include('_header.html')
         <main class="shop">
+            <div class="shop__content _container2">
+                <div class="shop__start">
+                    <h1>Магазин</h1>
+                    <div class="shop__breadcrumps breadcrumps">
+                        <a class="breadcrumps__link link">Главная</a>
+                        <span class="breadcrumps__current">Магазин</span>
+                    </div>
+                </div>
 
+                <div class="shop__middle goods">
+                    <form class="goods__filter filter" action="shop.html" method="GET">
+                        <h2 class="filter__title visually-hidden">Фильтровать по:</h2>
+
+                        <fieldset class="filter__dots dots">
+                            <legend class="dots__title">Квантовые точки</legend>
+                            <label class="dots__checkbox-field">
+                                <input class="dots__checkbox  visually-hidden" type="checkbox" name="dots-lantan">
+                                <span class="dots__checkbox-replacer"></span>
+                                Лантан
+                            </label>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         </main>
         @@include('_footer.html')
         @@include('_scripts.html')

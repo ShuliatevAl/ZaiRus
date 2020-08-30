@@ -786,11 +786,11 @@ a {
   background-color: grey;
 }
 
-.person-card:hover .person-card__front {
+.person-card:active .person-card__front {
   transform: rotateY(180deg);
 }
 
-.person-card:hover .person-card__back {
+.person-card:active .person-card__back {
   transform: rotateY(360deg);
 }
 
